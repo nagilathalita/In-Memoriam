@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>In Memoriam - Sagwa</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(135deg, #ffe4ec, #ffd6e0);
+      color: #6a3e46;
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4em;
+      margin-bottom: 10px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    header p {
+      font-style: italic;
+      font-size: 1.3em;
+      margin-bottom: 30px;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .galeria img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 20px;
+      border: 4px solid #f8c8dc;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.4s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    .card {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 20px;
+      font-size: 1.3em;
+      line-height: 1.8;
+      letter-spacing: 0.5px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease;
+    }
+
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .frase {
+      white-space: normal;
+      overflow: visible;
+      font-style: italic;
+      font-size: 1.2em;
+      text-align: center;
+    }
+
+    .player {
+      margin: 30px;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Sagwa</h1>
+  <p>"In Memoriam" ao amor da minha vida em forma de gato 🐾</p>
+</header>
+
+<div class="galeria">
+  <img src="foto1.jpg" alt="Sagwa">
+  <img src="foto2.jpg" alt="Sagwa">
+  <img src="foto3.jpg" alt="Sagwa">
+  <img src="foto4.jpg" alt="Sagwa">
+</div>
+
+<div class="card">
+  <p class="frase">“O amor que sentimos nunca morre — ele só muda de lugar.”</p>
+  <p><!-- adicione mais textos aqui --></p>
+</div>
+
+<div class="player">
+  <audio controls loop>
+    <source src="you-are-my-sunshine.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<footer>
+  <p>In Memoriam 💖</p>
+</footer>
+
+<script>
+  const card = document.querySelector('.card');
+
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      card.classList.add('show');
+    }, 500);
+  });
+</script>
+
+</body>
+</html>
+
